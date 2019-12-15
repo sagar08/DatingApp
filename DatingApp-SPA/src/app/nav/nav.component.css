@@ -1,0 +1,12 @@
+.dropdown-toggle,
+.dropdown-item {
+  cursor: pointer;
+}
+.dropdown-item {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
