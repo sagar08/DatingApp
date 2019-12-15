@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace DatingApp.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ValuesController : ControllerBase
