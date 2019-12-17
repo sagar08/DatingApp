@@ -1,3 +1,4 @@
+using System.Runtime.Serialization.Json;
 using System.Net;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
@@ -7,11 +8,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using DatingApp.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using DatingApp.Helper;
+using Newtonsoft.Json;
 
 namespace DatingApp.Api
 {
@@ -31,13 +34,18 @@ namespace DatingApp.Api
             services.AddDbContext<DataContext>(x => x.UseSqlite
             (Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(opt =>
+            {
+                opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
 
             // Add Cors
             services.AddCors();
 
             // Add Data Services
+            services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
@@ -91,6 +99,7 @@ namespace DatingApp.Api
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }
