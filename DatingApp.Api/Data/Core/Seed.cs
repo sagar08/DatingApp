@@ -13,7 +13,7 @@ namespace DatingApp.Data
         {
             if (!context.Users.Any())
             {
-                var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
+                var userData = System.IO.File.ReadAllText(@"Data\Core\UserSeedData.json");
                 var users = JsonConvert.DeserializeObject<List<User>>(userData);
 
                 foreach (var user in users)

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using DatingApp.Model;
 
 namespace DatingApp.Dto
 {
@@ -13,6 +12,8 @@ namespace DatingApp.Dto
         public string Gender { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+
+        public int Age { get; set; }
 
         public string KnownAs { get; set; }
 
@@ -28,6 +29,6 @@ namespace DatingApp.Dto
 
         public string PhotoUrl { get; set; }
 
-        public ICollection<Photo> Photos { get; set; }
+        public ICollection<PhotoForDetailDto> Photos { get; set; }
     }
 }

@@ -28,3 +28,31 @@ package
 Git 
 Remove item
  git rm launch.json --cached
+
+
+
+
+
+
+
+
+
+
+VS code extensions
+-------------------------------------
+dotnet Core
+1. C#
+2. C# Extensions
+
+Angular
+1. angular snippets
+2. Angular files
+3. Angular Language Service
+4. Auto Rename Tag
+5. Bracket Pair Colorizer 2
+6. Debugger for Chrome
+7. Material Icon Theme
+8. Prettier - Code formatter
+9. TSLint
+10.angular2-switcher
+

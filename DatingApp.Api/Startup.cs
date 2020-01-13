@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using DatingApp.Helper;
 using Newtonsoft.Json;
+using AutoMapper;
 
 namespace DatingApp.Api
 {
@@ -41,6 +42,9 @@ namespace DatingApp.Api
 
             // Add Cors
             services.AddCors();
+            
+            // Add Auto mapper
+            services.AddAutoMapper(typeof(DatingRepository).Assembly);
 
             // Add Data Services
             services.AddTransient<Seed>();
