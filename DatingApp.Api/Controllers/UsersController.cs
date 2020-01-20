@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace DatingApp.Api.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase

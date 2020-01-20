@@ -55,4 +55,5 @@ Angular
 8. Prettier - Code formatter
 9. TSLint
 10.angular2-switcher
+11. Auto Import
 

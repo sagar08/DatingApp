@@ -1,4 +1,3 @@
-using System.Runtime.Serialization.Json;
 using System.Net;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
@@ -7,12 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using DatingApp.Data;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using DatingApp.Data;
 using DatingApp.Helper;
 using Newtonsoft.Json;
 using AutoMapper;
