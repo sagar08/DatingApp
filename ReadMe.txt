@@ -3,6 +3,9 @@ Dotnet
 Entity framework code first
 Json package -
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 3.1.0
+-------------------------------------------------------------------------------
+* To support database migration install tool
+dotnet tool install --global dotnet-ef
  
 - Adding new table from code to datbase
 dotnet ef migrations add AddedUserEntity
